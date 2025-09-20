@@ -68,7 +68,7 @@ public class Server {
     	Random random = new Random();
     	ArrayList<String> reading = new ArrayList<>();
 
-    	while (reading.size() =< n) { // selection repeats size = 3
+    	while (reading.size() <= n) { // selection repeats size = 3
            Integer next = random.nextInt(cards.length);
 
            if(!reading.contains(cards[next])){
@@ -89,3 +89,4 @@ public static void main(String args[])
 Socket Programming in Java (https://www.geeksforgeeks.org/java/socket-programming-in-java/) 
 
 Creating Random Numbers With No Duplicates in Java (https://www.baeldung.com/java-unique-random-numbers) */
+
