@@ -81,10 +81,11 @@ public class Server {
 
 public static void main(String args[])
 {
-        Server s = new Server(54321); //initialises server on chosen port, 54321
+        Server s = new Server(args[0]); //initialises server on chosen port
     }
 }
 
 /* sources used:
 Socket Programming in Java (https://www.geeksforgeeks.org/java/socket-programming-in-java/) 
+
 Creating Random Numbers With No Duplicates in Java (https://www.baeldung.com/java-unique-random-numbers) */
