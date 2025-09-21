@@ -29,7 +29,7 @@ public class TarotCardServer {
     "Temperance", "The Devil", "The Tower", "The Star", "The Moon", "The Sun", "Judgement", "The World"};
 
     // Constructor with port
-    public Server(int port) {
+    public void Server(int port) {
 
         // Starts server and waits for a connection
         try
@@ -82,6 +82,7 @@ public static void main(String args[])
 Socket Programming in Java (https://www.geeksforgeeks.org/java/socket-programming-in-java/) 
 
 Creating Random Numbers With No Duplicates in Java (https://www.baeldung.com/java-unique-random-numbers) */
+
 
 
 
