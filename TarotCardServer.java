@@ -74,7 +74,7 @@ public class TarotCardServer {
 
 public static void main(String args[])
 {
-        Server s = new Server(Integer.parseInt(args[0])); //initialises server on chosen port
+        Server s = new TarotCardServer(Integer.parseInt(args[0])); //initialises server on chosen port
     }
 }
 
@@ -82,5 +82,6 @@ public static void main(String args[])
 Socket Programming in Java (https://www.geeksforgeeks.org/java/socket-programming-in-java/) 
 
 Creating Random Numbers With No Duplicates in Java (https://www.baeldung.com/java-unique-random-numbers) */
+
 
 
