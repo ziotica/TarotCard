@@ -48,7 +48,7 @@ public class TarotCardClient {
     }
 
     public static void main(String[] args) {
-        Client c = new Client(args[0], args[1]); // change to cmd line input
+        Client c = new TarotCardClient(args[0], args[1]); // change to cmd line input
     }
 }
 
@@ -58,3 +58,4 @@ public class TarotCardClient {
 /* sources used:
 
 Socket Programming in Java (https://www.geeksforgeeks.org/java/socket-programming-in-java/) */
+
