@@ -14,7 +14,7 @@
 import java.io.*;
 import java.net.*;
 
-public class Client {
+public class TarotCardClient {
   
     // Initialize socket and input/output streams
     private Socket s = null;
@@ -56,4 +56,5 @@ public class Client {
 
 
 /* sources used:
+
 Socket Programming in Java (https://www.geeksforgeeks.org/java/socket-programming-in-java/) */
