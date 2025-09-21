@@ -59,7 +59,7 @@ public class TarotCardServer {
 
             out = new DataOutputStream(s.getOutputStream());
 
-            out.writeObject(reading)
+            out.writeObject(reading);
         }
 
         // Catch block to handle for exceptions
@@ -69,4 +69,5 @@ public class TarotCardServer {
             return;
         }
     }
+
 }
