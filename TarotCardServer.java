@@ -17,7 +17,7 @@ import java.net.*; // for socket functions
 import java.io.*; // for worker outstream
 import java.util.*; // for my return reading. i could do it cleaner but i like array lists
 
-public class TarotCardServer {
+public class Server {
 
     // Initialize socket and input stream
     private Socket s = null;
@@ -82,6 +82,7 @@ public static void main(String args[])
 Socket Programming in Java (https://www.geeksforgeeks.org/java/socket-programming-in-java/) 
 
 Creating Random Numbers With No Duplicates in Java (https://www.baeldung.com/java-unique-random-numbers) */
+
 
 
 
