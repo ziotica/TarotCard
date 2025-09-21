@@ -17,7 +17,7 @@ import java.net.*; // for socket functions
 import java.io.*; // for worker outstream
 import java.util.*; // for my return reading. i could do it cleaner but i like array lists
 
-public class Server {
+public class TarotCardServer {
 
     // Initialize socket and input stream
     private Socket s = null;
@@ -43,8 +43,17 @@ public class Server {
             System.out.println("Client accepted"); // keep for debugging
 
             // Server returns three randomly selected cards         
+			
+			Random random = new Random();
+    		ArrayList<String> reading = new ArrayList<>();
 
-            ArrayList<String> reading = drawCards(3);
+		   	while (reading.size() <= 3) { // selection repeats size = 3
+				Integer next = random.nextInt(cards.length);
+				
+				if(!reading.contains(cards[next])){
+					reading.add(cards[next]);
+				}
+			}
 
 	        // send client the arraylist
             output = new DataOutputStream(socket.getOutputStream(), true);
@@ -63,25 +72,9 @@ public class Server {
         }
     }
 
-    public void drawCards(int n){ // return n cards, randomly selected, without repetition
-    // selects n indices of tarot cards, stored in order using a hashset
-    	Random random = new Random();
-    	ArrayList<String> reading = new ArrayList<>();
-
-    	while (reading.size() <= n) { // selection repeats size = 3
-           Integer next = random.nextInt(cards.length);
-
-           if(!reading.contains(cards[next])){
-            reading.add(cards[next]);
-        }
-    }
-
-    return reading;
-}
-
 public static void main(String args[])
 {
-        Server s = new Server(args[0]); //initialises server on chosen port
+        Server s = new Server(Integer.parseInt(args[0])); //initialises server on chosen port
     }
 }
 
@@ -89,4 +82,5 @@ public static void main(String args[])
 Socket Programming in Java (https://www.geeksforgeeks.org/java/socket-programming-in-java/) 
 
 Creating Random Numbers With No Duplicates in Java (https://www.baeldung.com/java-unique-random-numbers) */
+
 
