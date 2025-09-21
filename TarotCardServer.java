@@ -8,10 +8,7 @@ public class TarotCardServer {
     //initialise sockets
     private Socket s = null;
     private ServerSocket ss = null;
-
-    //initialise output stream
-    private ObjectOutputStream out = null;
-
+    
     //card deck
     private static String[] cards = {"The Fool", "The Magician", "The High Priestess", "The Empress", "The Emperor", "The Hierophant", 
     "The Lovers", "The Chariot", "Strength", "The Hermit", "Wheel of Fortune", "Justice", "The Hanged Man", "Death", 
@@ -57,7 +54,7 @@ public class TarotCardServer {
                 }
             }
 
-            out = new ObjectOutputStream(s.getOutputStream());
+            ObjectOutputStream out = new ObjectOutputStream(s.getOutputStream());
 
             out.writeObject(reading);
         }
@@ -71,4 +68,5 @@ public class TarotCardServer {
     }
 
 }
+
 
