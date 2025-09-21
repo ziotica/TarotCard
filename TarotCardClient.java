@@ -10,6 +10,8 @@ public class TarotCardClient {
             Socket s = new Socket(args[0], Integer.parseInt(args[1]));
             ObjectInputStream in = new ObjectInputStream(s.getInputStream());
 
+            class ArrayList<String> extends ArrayList<String>
+
             ArrayList<String> reading = (ArrayList<String>) in.readObject();
             
             for(String card : reading){
@@ -27,6 +29,7 @@ Socket Programming in Java
 (https://www.geeksforgeeks.org/java/socket-programming-in-java/)
 How to Create a Socket at a Specific Port in Java?
 (https://www.geeksforgeeks.org/java/how-to-create-a-socket-at-a-specific-port-in-java/) */
+
 
 
 
