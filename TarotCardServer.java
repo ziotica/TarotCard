@@ -2,12 +2,7 @@ import java.net.*;
 import java.io.*;
 import java.util.*;
 
-public class TarotCardServer {
-
-    //initialise sockets
-    private Socket s = null;
-    private ServerSocket ss = null;
-    
+public class TarotCardServer {    
     //card deck
     private static String[] cards = {"The Fool", "The Magician", "The High Priestess", "The Empress", "The Emperor", "The Hierophant", 
     "The Lovers", "The Chariot", "Strength", "The Hermit", "Wheel of Fortune", "Justice", "The Hanged Man", "Death", 
@@ -57,3 +52,4 @@ Socket Programming in Java
 (https://www.geeksforgeeks.org/java/socket-programming-in-java/)
 How to Create a Socket at a Specific Port in Java?
 (https://www.geeksforgeeks.org/java/how-to-create-a-socket-at-a-specific-port-in-java/) */
+
