@@ -29,7 +29,7 @@ public class TarotCardServer {
                         reading.add(cards[next]);
                     }
                 }
-                reading.add("Server +" InetAddress.getLocalHost().getHostAddress());
+                reading.add("Server: " InetAddress.getLocalHost().getHostAddress());
                 
                 // sent client the reading
                 ObjectOutputStream out = new ObjectOutputStream(s.getOutputStream());
@@ -50,4 +50,5 @@ Socket Programming in Java
 (https://www.geeksforgeeks.org/java/socket-programming-in-java/)
 How to Create a Socket at a Specific Port in Java?
 (https://www.geeksforgeeks.org/java/how-to-create-a-socket-at-a-specific-port-in-java/) */
+
 
