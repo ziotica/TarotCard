@@ -23,15 +23,11 @@ public class TarotCardServer {
                 ArrayList<String> reading = new ArrayList<>();
                 Random random = new Random();
                 
-                Set<Integer> drawn = new LinkedHashSet<>();
-                while (drawn.size() < 3) {
+                while(reading.length < 7) {
                     Integer next = random.nextInt(cards.length);
-                    drawn.add(next);
-                }
-
-                for(Integer num : drawn) {
-                    reading.add(cards[num];
-                    processObject(num);
+                    if(!reading.contains(cards[next])){
+                        reading.add(cards[next]);
+                    }
                 }
                 
                 // sent client the reading
@@ -53,4 +49,5 @@ Socket Programming in Java
 (https://www.geeksforgeeks.org/java/socket-programming-in-java/)
 How to Create a Socket at a Specific Port in Java?
 (https://www.geeksforgeeks.org/java/how-to-create-a-socket-at-a-specific-port-in-java/) */
+
 
