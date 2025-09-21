@@ -23,7 +23,7 @@ public class TarotCardServer {
                 ArrayList<String> reading = new ArrayList<>();
                 Random random = new Random();
     
-                if(reading.size() < 3) {
+                while(reading.length < 3) {
                     Integer next = random.nextInt(cards.length);
                     if(!reading.contains(cards[next])){
                         reading.add(cards[next]);
@@ -49,5 +49,3 @@ Socket Programming in Java
 (https://www.geeksforgeeks.org/java/socket-programming-in-java/)
 How to Create a Socket at a Specific Port in Java?
 (https://www.geeksforgeeks.org/java/how-to-create-a-socket-at-a-specific-port-in-java/) */
-
-
