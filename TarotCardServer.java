@@ -14,32 +14,29 @@ public class TarotCardServer {
             // create server socket with given port number
             ServerSocket ss = new ServerSocket(Integer.parseInt(args[0]));
 
-            // wait until client connects
-            Socket s = ss.accept();
+            while(true){
+                // wait until client connects
+                Socket s = ss.accept();
 
-            // Display message
-            System.out.println(
-                "Client accepted through the port number: "
-                + ss.getLocalPort());
-            
-            // randomly select the past, present, and future cards
-            // without replacement, fixed size of 3
-            ArrayList<String> reading = new ArrayList<>();
-            Random random = new Random();
-
-            while(reading.size() <= 3) {
-                Integer next = random.nextInt(cards.length);
-                if(!reading.contains(cards[next])){
-                    reading.add(cards[next]);
+                // randomly select the past, present, and future cards
+                // without replacement, fixed size of 3
+                ArrayList<String> reading = new ArrayList<>();
+                Random random = new Random();
+    
+                while(reading.size() <= 3) {
+                    Integer next = random.nextInt(cards.length);
+                    if(!reading.contains(cards[next])){
+                        reading.add(cards[next]);
+                    }
                 }
+                
+                // sent client the reading
+                ObjectOutputStream out = new ObjectOutputStream(s.getOutputStream());
+                out.writeObject(reading);
+                
+                s.close();
+                out.close();
             }
-            
-            // sent client the reading
-            ObjectOutputStream out = new ObjectOutputStream(s.getOutputStream());
-            out.writeObject(reading);
-            
-            s.close();
-            out.close();
         }
         catch (Exception e) {
             return;
@@ -52,4 +49,3 @@ Socket Programming in Java
 (https://www.geeksforgeeks.org/java/socket-programming-in-java/)
 How to Create a Socket at a Specific Port in Java?
 (https://www.geeksforgeeks.org/java/how-to-create-a-socket-at-a-specific-port-in-java/) */
-
